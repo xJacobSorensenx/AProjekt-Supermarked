@@ -1,0 +1,2 @@
+# AProjekt-Supermarked
+Shopping komponenten
