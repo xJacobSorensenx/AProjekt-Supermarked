@@ -7,16 +7,16 @@ namespace AProjekt_Supermarked.Models
         //primary key
         public int Id { get; set; }
 
-        //shopping key - dato duer ikke hvis der handles flere gange på samme dag
-        public int Fakturanummer { get; set; }
+        public int Antal { get; set; }
 
-        //dato for indkøbet
-        public DateTime Dato { get; set; }
-    
         //foreign key over i Varetabellen
         //virtual for at enable lazy-loading
         public virtual int VareID { get; set; }
         public virtual VareModel Vare { get; set; }
+
+
+        public virtual int HHID { get; set; }
+        public virtual HandelsHistorikModel HandelsHistorik { get; set; }
 
     }
 }

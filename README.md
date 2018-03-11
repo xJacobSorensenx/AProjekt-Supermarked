@@ -32,12 +32,16 @@ fjerne en varer
 
 
 modeller:
-Kunde:
+Kunde: (personlige oplysninger om kunden)
 -id (int)
 -brugernavn (string)
--password (pw/string)
--kurv (liste af vare)
--historik(liste af indkøb)
+(-password (pw/string))
+
+KundeIndkob:
+-id(int)
+-fakturanummer(string)
+-dato
+-
 
 vare:
 -id(int)
