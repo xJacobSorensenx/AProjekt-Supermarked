@@ -45,14 +45,16 @@ vare:
 -pris(int)
 -beskrivelse(string)
 
+indkøb:
+-vareID (int)
+-dato
 
 Supermarked:
 -inventar (liste af vare)
 (der skal oprettes en komplex type der indeholde en vare samt en int til at bestemme antallet af vare)
 
 Historik:
--indkøb (liste af vare)
--dato 
+-tidligereIndKøb (liste af indkøb)
 -betalt (bool)
 
 
