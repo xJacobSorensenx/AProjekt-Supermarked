@@ -41,11 +41,12 @@ namespace AProjekt_Supermarked
 
             app.UseStaticFiles();
 
+            //ændret default routeren til at starte i Shop controlleren
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Shop}/{action=Index}/{id?}");
             });
         }
     }

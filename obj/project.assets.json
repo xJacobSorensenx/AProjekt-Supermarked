@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitRepo\\AProjekt-Supermarked\\AProjekt-Supermarked.csproj",
+      "projectUniqueName": "C:\\Users\\Jacob\\AProjekt-Supermarked\\AProjekt-Supermarked.csproj",
       "projectName": "AProjekt-Supermarked",
-      "projectPath": "C:\\GitRepo\\AProjekt-Supermarked\\AProjekt-Supermarked.csproj",
+      "projectPath": "C:\\Users\\Jacob\\AProjekt-Supermarked\\AProjekt-Supermarked.csproj",
       "packagesPath": "C:\\Users\\Jacob\\.nuget\\packages\\",
-      "outputPath": "C:\\GitRepo\\AProjekt-Supermarked\\obj\\",
+      "outputPath": "C:\\Users\\Jacob\\AProjekt-Supermarked\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

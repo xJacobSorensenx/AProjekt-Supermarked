@@ -14,7 +14,6 @@ namespace AProjekt_Supermarked.Services
         public DbSet<KundeModel> dbsKunde { get; set; }
         public DbSet<HandelsHistorikModel> dbsHH { get; set; }
 
-
     }
     
 }
