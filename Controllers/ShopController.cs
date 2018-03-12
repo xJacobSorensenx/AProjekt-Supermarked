@@ -1,20 +1,24 @@
 using AProjekt_Supermarked.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AProjekt_Supermarked.Controllers
 {
     public class ShopController : Controller
     {
+        List<string> kurv;
         private ShoppingContext dbctx;
         public ShopController(ShoppingContext _ctx)
         {
             dbctx=_ctx;
+            kurv= new List<string>();
         }
 
         public IActionResult Index(){
             return View();
         }        
+
 
         public IActionResult SpecifikVare(int id){
             

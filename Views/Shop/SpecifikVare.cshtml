@@ -13,7 +13,19 @@
 
 <h2>Valg : @ViewData["VareKategori"]</h2>
 
+<div class="container-fluid">
+
 @foreach(var vare in Model){
-    <p>@vare.Navn</p><br />
+    
+    <div class="row">
+        <div class="col-md-6 Vare-Box">@vare.Navn</div>
+        <div class="col-md-6 Util-Box">
+
+            <a asp-controller="" asp-action="" class="btn btn-default">Læg i kurv</a>
+        </div>
+    </div>
+
 }
 
+
+</div>
