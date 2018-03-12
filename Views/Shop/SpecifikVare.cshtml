@@ -1,7 +1,19 @@
+@model IEnumerable<AProjekt_Supermarked.Models.VareModel>
+
 <h1>Specifik Vare</h1>
+
 
 
 <a asp-area="" asp-action="Index" asp-controller="Shop">Index side</a><br />
 <a asp-area="" asp-action="SpecifikVare" asp-controller="Shop">Specifik Vare side</a><br />
 <a asp-area="" asp-action="Betaling" asp-controller="Shop">Betaling side</a><br />
 <a asp-area="" asp-action="Opsumering" asp-controller="Shop">Opsumering side</a><br />
+<br />
+<br />
+
+<h2>Valg : @ViewData["VareKategori"]</h2>
+
+@foreach(var vare in Model){
+    <p>@vare.Navn</p><br />
+}
+

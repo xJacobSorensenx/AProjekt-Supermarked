@@ -13,6 +13,7 @@ namespace AProjekt_Supermarked.Services
         public DbSet<VareModel> dbsVare { get; set; }
         public DbSet<KundeModel> dbsKunde { get; set; }
         public DbSet<HandelsHistorikModel> dbsHH { get; set; }
+        public DbSet<VareKatModel> dbsKategorier { get; set; }
 
     }
     

@@ -1,16 +1,31 @@
+using AProjekt_Supermarked.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace AProjekt_Supermarked.Controllers
 {
     public class ShopController : Controller
     {
+        private ShoppingContext dbctx;
+        public ShopController(ShoppingContext _ctx)
+        {
+            dbctx=_ctx;
+        }
 
         public IActionResult Index(){
             return View();
         }        
 
         public IActionResult SpecifikVare(int id){
-            return View();
+            
+            var Kategori = dbctx.dbsKategorier.FirstOrDefault(x=>x.VareKatID==id);
+
+            ViewData["VareKategori"]=Kategori.Kategori;
+
+
+            var model = dbctx.dbsVare.Where(x=>x.VareKatID==id).ToList();
+
+            return View(model);
         }
 
         public IActionResult Betaling(){

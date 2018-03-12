@@ -12,6 +12,8 @@ namespace AProjekt_Supermarked.Models
         //navnet på varen
         public string Navn { get; set; }
 
+        
+
         //prisen på varen
         public int Pris { get; set; }
 
@@ -21,6 +23,9 @@ namespace AProjekt_Supermarked.Models
         //en-til-mange; en vare kan optræde i mange forskellige indkøb
         //virtual for at enable lazy-loading
         public virtual ICollection<IndkobModel> Indkob { get; set; }
+
+        public virtual int VareKatID { get; set; }
+        public virtual VareKatModel Vare { get; set; }
     
     }
 }

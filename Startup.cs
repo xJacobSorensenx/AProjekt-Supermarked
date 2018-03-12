@@ -23,7 +23,8 @@ namespace AProjekt_Supermarked
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ShoppingContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ShoppingCS")));   
+            //services.AddDbContext<ShoppingContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ShoppingCS")));   
+            services.AddDbContext<ShoppingContext>(options => options.UseInMemoryDatabase("tmpnavn1234"));
             services.AddMvc();
         }
 
