@@ -1,4 +1,5 @@
 using AProjekt_Supermarked.Services;
+using AProjekt_Supermarked.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,10 @@ namespace AProjekt_Supermarked.Controllers
 {
     public class ShopController : Controller
     {
-        List<string> kurv;
         private ShoppingContext dbctx;
         public ShopController(ShoppingContext _ctx)
         {
             dbctx=_ctx;
-            kurv= new List<string>();
         }
 
         public IActionResult Index(){
@@ -23,13 +22,23 @@ namespace AProjekt_Supermarked.Controllers
         public IActionResult SpecifikVare(int id){
             
             var Kategori = dbctx.dbsKategorier.FirstOrDefault(x=>x.VareKatID==id);
+            var VM = new VMtest1();
+            var strlist = new List<string>();
+
+            strlist.Add("debug1");
+            strlist.Add("debug2");
+            strlist.Add("debug3");
+            strlist.Add("debug4");
 
             ViewData["VareKategori"]=Kategori.Kategori;
 
+            VM.Varer=dbctx.dbsVare.Where(x=>x.VareKatID==id).ToList();
 
-            var model = dbctx.dbsVare.Where(x=>x.VareKatID==id).ToList();
+            VM.Kurven=strlist;
 
-            return View(model);
+
+
+            return View(VM);
         }
 
         public IActionResult Betaling(){
